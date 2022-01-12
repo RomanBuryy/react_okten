@@ -2,6 +2,7 @@ import Users from "./components/Users/Users";
 
 import './App.css';
 import Posts from "./components/Posts/Posts";
+import Comments from "./components/Comments/Comments";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <Posts/>
         </div>
         <div>
+            <Comments/>
 
         </div>
 
