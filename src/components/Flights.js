@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Flight from "./flight";
+import Flight from "./Flight";
 
 const Flights = () => {
     const [flights, setFlights] = useState([]);

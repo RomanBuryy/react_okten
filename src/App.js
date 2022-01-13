@@ -1,4 +1,4 @@
-import Flights from "./components/flights";
+import Flights from "./components/Flights";
 import './App.css';
 
 
