@@ -1,0 +1,27 @@
+.App {
+    display: flex;
+    color: #ececec;
+}
+
+img {
+    width: 100px;
+}
+
+.flights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.flight {
+    width: 450px;
+    margin-top: 12px;
+    background-color: #131212;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(8, 35, 48, 0.24);
+    border-radius: 6px;
+}
