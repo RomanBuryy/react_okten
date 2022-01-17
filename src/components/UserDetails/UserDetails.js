@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const UserDetails = ({oneUser, getPosts}) => {
     const {id, name, email, username, phone, website} = oneUser;
     return (

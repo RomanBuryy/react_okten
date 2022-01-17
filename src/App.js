@@ -27,8 +27,6 @@ function App() {
             <Users giveMeOneUser={giveMeOneUser}/>
             <UserDetails oneUser={oneUser} getPosts={getPosts}/>
             <Posts posts={posts}/>
-
-
         </div>
     );
 }
