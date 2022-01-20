@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import UsersPage from "./pages/UsersPage/UsersPage";
 import PostsPage from "./pages/PostsPage/PostsPage";
 import Layout from "./components/Layout/Layout";
+import UserDetailsPage from "./pages/UserDetailsPage/UserDetailsPage";
 
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
                 <Route path={'/'} element={<Layout/>}>
 
                     <Route index element={<HomePage/>}/>
-                    <Route path={'users'} element={<UsersPage/>}/>
+                    <Route path={'users'} element={<UsersPage/>}>
+                        <Route path={':id'} element={<UserDetailsPage/>}/>
+                    </Route>
+
                     <Route path={'posts'} element={<PostsPage/>}/>
 
                 </Route>
