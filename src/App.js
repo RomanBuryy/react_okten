@@ -11,11 +11,10 @@ import UserDetailsPage from "./pages/UserDetailsPage/UserDetailsPage";
 function App() {
     return (
         <div className="App">
-
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
-
                     <Route index element={<HomePage/>}/>
+
                     <Route path={'users'} element={<UsersPage/>}>
                         <Route path={':id'} element={<UserDetailsPage/>}/>
                     </Route>
@@ -23,13 +22,8 @@ function App() {
                     <Route path={'posts'} element={<PostsPage/>}/>
 
                 </Route>
-
             </Routes>
-
-
-
         </div>
-
 
 )
     ;

@@ -15,9 +15,13 @@ const UsersPage = () => {
 
 
     return (
-        <div>
+        <div className={'col'}>
+            <div className={'users'}>
             {users && users.map(user => <User key={user.id} user={user}/>)}
-            <Outlet/>
+            </div>
+
+                <Outlet/>
+
         </div>
     );
 };
