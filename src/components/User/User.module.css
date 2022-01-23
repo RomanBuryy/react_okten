@@ -1,0 +1,25 @@
+.user{
+    background-color: #262837;
+    color: #FCFAFF;
+    margin-top: 20px;
+    width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+}
+
+button{
+    background-color: #0277FF;
+    border: none;
+    height: 30px;
+    width: 90px;
+    border-radius: 20px;
+    color: #FCFAFF;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0063db;
+}

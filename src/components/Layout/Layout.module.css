@@ -1,8 +1,9 @@
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #121212;
+    background-color: #211E2D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
     height: 60px;
     column-gap: 30px;
 }
@@ -14,5 +15,11 @@
 }
 
 .header a[class='active']{
-    color: #e20000;
+    color: #0277FF;
+    font-weight: 600;
+}
+
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
 }

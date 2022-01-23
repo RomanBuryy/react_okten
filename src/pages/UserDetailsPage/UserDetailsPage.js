@@ -1,24 +1,36 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
-
+import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 import {userService} from "../../services/user.service";
+
+
 
 const UserDetailsPage = () => {
 
-    const {id} = useParams();
-    const [user, setUser] = useState([]);
+    const userParams = useParams();
 
-    useEffect(() => {
-        userService.getById(id).then(value => setUser({...value}));
-
-    }, [id])
-    console.log(user)
+    const {state} = useLocation();
 
 
 
     return (
-        <div className={'user_details'}>
-            {user && (<div>User name is {user.name}</div>)}
+        <div>
+            <div>
+
+                <p>{state.address.city}</p>
+                <p>{state.address.street}</p>
+                <p>{state.email}</p>
+                <p>{state.phone}</p>
+
+                <Link to={'posts'} state={state}>  <button>Details</button> </Link>
+
+            </div>
+
+
+
+            <div>
+                <Outlet/>
+            </div>
+
         </div>
     );
 };

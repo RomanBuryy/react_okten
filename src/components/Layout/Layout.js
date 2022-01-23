@@ -8,12 +8,12 @@ const Layout = () => {
     return (
         <div>
             <div className={css.header}>
-                <NavLink to={'/'}>Home</NavLink>
+
                 <NavLink to={'/users'}>Users</NavLink>
                 <NavLink to={'/posts'}>Posts</NavLink>
             </div>
 
-            <div className={'outlet'}>
+            <div className={css.wrap}>
                 <Outlet/>
             </div>
 
