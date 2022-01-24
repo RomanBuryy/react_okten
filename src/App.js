@@ -6,6 +6,8 @@ import PostsPage from "./pages/PostsPage/PostsPage";
 import Layout from "./components/Layout/Layout";
 import UserDetailsPage from "./pages/UserDetailsPage/UserDetailsPage";
 import UserPostPage from "./pages/UserPostPage/UserPostPage";
+import PostDetailPage from "./pages/PostDetailPage/PostDetailPage";
+import PostCommentsPage from "./pages/PostCommentsPage/PostCommentsPage";
 
 function App() {
     return (
@@ -20,7 +22,13 @@ function App() {
                         </Route>
                     </Route>
 
-                    <Route path={'posts'} element={<PostsPage/>}/>
+                    <Route path={'posts'} element={<PostsPage/>}>
+
+                        <Route path={':id'} element={<PostDetailPage/>}>
+                            <Route path={'comments'} element={<PostCommentsPage/>}/>
+                        </Route>
+
+                    </Route>
 
 
 

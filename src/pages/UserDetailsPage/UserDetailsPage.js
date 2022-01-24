@@ -1,16 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {Link, Outlet, useLocation, useParams} from "react-router-dom";
-import {userService} from "../../services/user.service";
+
+import {Link, Outlet, useLocation} from "react-router-dom";
+
 
 
 
 const UserDetailsPage = () => {
 
-    const userParams = useParams();
-
     const {state} = useLocation();
-
-
 
     return (
         <div>
@@ -21,7 +17,7 @@ const UserDetailsPage = () => {
                 <p>{state.email}</p>
                 <p>{state.phone}</p>
 
-                <Link to={'posts'} state={state}>  <button>Details</button> </Link>
+                <Link to={'posts'} state={state}>  <button>User posts</button> </Link>
 
             </div>
 
