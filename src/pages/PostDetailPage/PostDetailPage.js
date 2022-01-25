@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation} from "react-router-dom";
-import {postService} from "../../services/post.service";
+import css from './PostDetailPage.module.css'
 
 
 const PostDetailPage = () => {
@@ -12,7 +12,7 @@ const PostDetailPage = () => {
 
     return (
         <div>
-            <div>
+            <div className={css.post_detail}>
 
                 <p>{state.body}</p>
 

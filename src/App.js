@@ -8,6 +8,8 @@ import UserDetailsPage from "./pages/UserDetailsPage/UserDetailsPage";
 import UserPostPage from "./pages/UserPostPage/UserPostPage";
 import PostDetailPage from "./pages/PostDetailPage/PostDetailPage";
 import PostCommentsPage from "./pages/PostCommentsPage/PostCommentsPage";
+import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
+import PhotosPage from "./pages/PhotosPage/PhotosPage";
 
 function App() {
     return (
@@ -17,9 +19,17 @@ function App() {
                     <Route index element={<Navigate to={'users'}/>}/>
 
                     <Route path={'users'} element={<UsersPage/>}>
-                        <Route path={':id'} element={<UserDetailsPage/>}>
+                        <Route path={':id'} element={<UserDetailsPage/>}>.
                             <Route path={'posts'} element={<UserPostPage/>}/>
                         </Route>
+
+                        <Route path={':id/albums'} element={<AlbumsPage/>}>
+                            <Route path={':id/photos'} element={<PhotosPage/>}/>
+                        </Route>
+
+
+
+
                     </Route>
 
                     <Route path={'posts'} element={<PostsPage/>}>

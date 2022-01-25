@@ -1,5 +1,6 @@
 
 import {Link, Outlet, useLocation} from "react-router-dom";
+import css from './UserDetailsPage.module.css'
 
 
 
@@ -10,7 +11,7 @@ const UserDetailsPage = () => {
 
     return (
         <div>
-            <div>
+            <div className={css.details}>
 
                 <p>{state.address.city}</p>
                 <p>{state.address.street}</p>
