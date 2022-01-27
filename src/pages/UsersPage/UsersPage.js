@@ -14,14 +14,12 @@ const UsersPage = () => {
         })
     }, []);
 
-
     return (
         <div className={css.users}>
             <div>
-            { users && users.map( user => <User key={user.id} user={user}/> )}
+                {users && users.map(user => <User key={user.id} user={user}/>)}
             </div>
             <Outlet/>
-
         </div>
     );
 };

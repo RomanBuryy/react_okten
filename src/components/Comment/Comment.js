@@ -6,7 +6,6 @@ const Comment = ({comment}) => {
 
     const {name, email, body} = comment;
 
-
     return (
         <div className={css.comment}>
             <p>{name}</p>

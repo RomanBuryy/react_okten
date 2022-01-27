@@ -1,4 +1,4 @@
-import {Route, Routes, Link, Navigate} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 
 import './App.css';
 import UsersPage from "./pages/UsersPage/UsersPage";
@@ -27,27 +27,18 @@ function App() {
                             <Route path={':photoId/photos'} element={<PhotosPage/>}/>
                         </Route>
 
-
-
-
                     </Route>
 
                     <Route path={'posts'} element={<PostsPage/>}>
-
                         <Route path={':id'} element={<PostDetailPage/>}>
                             <Route path={'comments'} element={<PostCommentsPage/>}/>
                         </Route>
-
                     </Route>
-
-
-
                 </Route>
             </Routes>
         </div>
-
-)
-    ;
+    )
+        ;
 }
 
 export default App;

@@ -6,15 +6,13 @@ import Comment from "../../components/Comment/Comment";
 const PostCommentsPage = () => {
 
     const {state} = useLocation();
+    const [comments, setComments] = useState([]);
 
-    const [comments,setComments] = useState([]);
-
-    useEffect(()=>{
-        postService.getByPostId(state.id).then(value=>{setComments(value)})
-    },[state.id]);
-
-
-
+    useEffect(() => {
+        postService.getByPostId(state.id).then(value => {
+            setComments(value)
+        })
+    }, [state.id]);
 
     return (
         <div>
