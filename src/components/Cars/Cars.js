@@ -9,8 +9,7 @@ const Cars = () => {
     const dispatch = useDispatch();
 
 
-
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getAllCars())
     }, [])
 
@@ -19,7 +18,7 @@ const Cars = () => {
             {status === 'loading' && <h1>Loading</h1>}
             {status === 'error' && <h1>{error}</h1>}
 
-            {cars.map(car => <Car key={car.id} car={car} />)}
+            {cars.map(car => <Car key={car.id} car={car}/>)}
         </div>
     );
 };

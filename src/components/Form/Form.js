@@ -1,7 +1,7 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
-import { createCar} from "../../store";
+import {createCar} from "../../store";
 
 const Form = () => {
 
@@ -9,7 +9,7 @@ const Form = () => {
     const dispatch = useDispatch();
 
     const submit = (data) => {
-       dispatch(createCar({data}))
+        dispatch(createCar({data}))
         reset();
     }
 
