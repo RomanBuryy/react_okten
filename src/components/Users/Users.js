@@ -5,7 +5,7 @@ import User from "../User/User";
 
 const Users = () => {
 
-    const {users} = useSelector(state => state['userReducer']);
+    const {users} = useSelector(state => state['userReducer']); //отримати даны з state
     const dispatch = useDispatch();
 
 
