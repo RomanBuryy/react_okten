@@ -2,8 +2,8 @@ import {axiosService} from "./axios.service";
 import {urls} from "../constants";
 
 
-export const userService = {
-    getAll: () => axiosService.get(urls.movie).then(value => value.data)
+export const moviesService = {
+    getAll: () => axiosService.get(urls.movies).then(value => value.data)
 
 
 }

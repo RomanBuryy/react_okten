@@ -1,0 +1,9 @@
+.movies{
+    display: flex;
+    width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    border-right: 2px solid #24252A;
+    margin-top: 146px;
+}

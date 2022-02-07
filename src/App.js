@@ -1,33 +1,24 @@
-
-
+import {Route, Routes, Navigate} from 'react-router-dom'
 import './App.css';
-import {useEffect, useState} from "react";
-import {userService as moviesService} from "./services/movies.service";
 
+
+import Layout from "./components/Layout/Layout";
+import MoviesPage from "./pages/MoviesPage/MoviesPage";
 
 
 function App() {
 
-    const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-        moviesService.getAll().then((movie) => {
-            setMovies(movie)
-        })
-    }, []);
-
-    console.log(movies)
-
-
-
-
-
-
-  return (
-    <div className="App">
-      App
-    </div>
-  );
+    return (
+        <div>
+            <Routes>
+                <Route path={'/'} element={<Layout/>}>
+                    <Route index element={<Navigate to={'movies'}/>}/>
+                    <Route path={'movies'} element={<MoviesPage/>}/>
+                    <Route path={'genres'} element={<MoviesPage/>}/>
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
