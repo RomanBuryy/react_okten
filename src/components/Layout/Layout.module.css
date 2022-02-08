@@ -1,7 +1,7 @@
 .layout{
-    display: flex;
+
     margin: 0 auto;
-    width: 1440px;
+    width: 1320px;
 
 
 
@@ -9,21 +9,16 @@
 }
 
 .menu{
-    display: flex;
-    flex-direction: column;
-    width: 275px;
-    border-right: 2px solid #24252A;
+display: flex;
+height: 100px;
 
 }
 
-.menu_item{
-    display: flex;
-    align-items: center;
-}
+
 
 .menu_item a{
 
-    color: #696972;
+    color: #C3C5CB;
     text-decoration: none;
     font-weight: 600;
     font-size: 24px;
@@ -32,8 +27,8 @@
 }
 
 .menu_item a[class='active']{
-    color: #E2E4ED;
-    border-right: 4px solid #D81F26;
+    color: #00A4CD;
+
 
 
 
