@@ -4,6 +4,7 @@ import './App.css';
 
 import Layout from "./components/Layout/Layout";
 import MoviesPage from "./pages/MoviesPage/MoviesPage";
+import GenresPage from "./pages/GenresPage/GenresPage";
 
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
                 <Route path={'/'} element={<Layout/>}>
                     <Route index element={<Navigate to={'movies'}/>}/>
                     <Route path={'movies'} element={<MoviesPage/>}/>
-                    <Route path={'genres'} element={<MoviesPage/>}/>
+                    <Route path={'genres'} element={<GenresPage/>}/>
+
+
                 </Route>
             </Routes>
         </div>

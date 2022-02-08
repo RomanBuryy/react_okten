@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {moviesService} from '../services/movies.service'
 
+import {moviesService} from '../services/movies.service'
 
 export const getAllMovies = createAsyncThunk(
     'movieSlice/getAllMovies',
@@ -13,22 +13,17 @@ export const getAllMovies = createAsyncThunk(
     }
 )
 
-
 const moviesSlice = createSlice({
     name: 'movieSlice',
     initialState: {
         movies: [],
         status: null,
         error: null
-
     },
-    reducers: {
-
-    },
-    extraReducers:{
-        [getAllMovies.fulfilled]: (state, action) =>{
+    reducers: {},
+    extraReducers: {
+        [getAllMovies.fulfilled]: (state, action) => {
             state.movies = action.payload;
-
         }
     }
 })
