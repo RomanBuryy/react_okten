@@ -13,6 +13,18 @@ export const getAllMovies = createAsyncThunk(
     }
 )
 
+export const getAllMoviesWithGenre = createAsyncThunk(
+    'movieSlice/getAllMoviesWithGenre',
+    async (id, {rejectedWithValue}) => {
+        try {
+            return await moviesService.getAllWithGenre(id);
+        } catch (e) {
+            rejectedWithValue(e.message);
+        }
+    }
+)
+
+
 const moviesSlice = createSlice({
     name: 'movieSlice',
     initialState: {
@@ -23,6 +35,9 @@ const moviesSlice = createSlice({
     reducers: {},
     extraReducers: {
         [getAllMovies.fulfilled]: (state, action) => {
+            state.movies = action.payload;
+        },
+        [getAllMoviesWithGenre.fulfilled]: (state, action) => {
             state.movies = action.payload;
         }
     }

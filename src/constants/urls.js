@@ -5,7 +5,8 @@ export default baseURL;
 
 export const urls = {
     movies: `/discover/movie?api_key=${apiKey}`,
-    genres: `/genre/movie/list?api_key=${apiKey}&language=en-US`
+    genres: `/genre/movie/list?api_key=${apiKey}&language=en-US`,
+
 
 
 }
