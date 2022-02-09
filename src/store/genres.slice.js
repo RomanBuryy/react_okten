@@ -17,10 +17,17 @@ const genresSlice = createSlice({
     name: 'movieSlice',
     initialState: {
         genres: [],
+        genresMovies:[],
         status: null,
         error: null
     },
-    reducers: {},
+    reducers: {
+        filmsOfCurrentGenre: (state, action) => {
+        state.genresMovies.push(
+        action.payload.data
+    )
+}
+    },
     extraReducers: {
         [getAllGenres.fulfilled]: (state, action) => {
             state.genres = action.payload;
