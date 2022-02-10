@@ -17,8 +17,14 @@ const GenresPage = () => {
 
     return (
         <div>
-            {genres.genres && genres.genres.map(value => <Genre key={value.id} genre={value}/>)}
-            <Outlet/>
+            <div>
+                {genres.genres && genres.genres.map(value => <Genre key={value.id} genre={value}/>)}
+            </div>
+
+           <div>
+               <Outlet/>
+           </div>
+
 
         </div>
 

@@ -32,7 +32,13 @@ const moviesSlice = createSlice({
         status: null,
         error: null
     },
-    reducers: {},
+    reducers: {
+        getMovie: (state, action) => {
+            // state.movies = state.movies.results.filter(value=> value.id === action.payload.id)
+            // state.movies = state.movies.results.filter(value=> value.id === action.payload.id)
+            console.log(state.movies)
+        }
+    },
     extraReducers: {
         [getAllMovies.fulfilled]: (state, action) => {
             state.movies = action.payload;
@@ -44,5 +50,5 @@ const moviesSlice = createSlice({
 })
 
 const moviesReducer = moviesSlice.reducer;
-// export const {movieTest} = moviesSlice.actions
+export const {getMovie} = moviesSlice.actions
 export default moviesReducer
