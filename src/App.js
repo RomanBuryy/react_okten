@@ -21,7 +21,9 @@ function App() {
                     <Route path={'movies/:id'} element={<MovieDetailsPage/>}/>
 
                     <Route path={'genres'} element={<GenresPage/>}>
-                        <Route path={':id'} element={<MovieGenresPage/>}/>
+                        <Route path={':id'} element={<MovieGenresPage/>}>
+                            <Route path={':id'} element={<MovieDetailsPage/>}/>
+                        </Route>
                     </Route>
                 </Route>
             </Routes>

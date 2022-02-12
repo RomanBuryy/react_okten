@@ -1,26 +1,36 @@
 import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, Outlet} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {getMovie} from "../../store";
 
+
+import {getMovieById} from "../../store";
+import StarRatings from 'react-star-ratings';
 
 const MovieDetailsPage = () => {
 
     const params = useParams();
 
-    console.log(params);
-
-    const {movies} = useSelector(state => state['moviesReducer'])
+    const {movie} = useSelector(state => state['moviesReducer'])
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getMovie(movies));
-    }, [dispatch])
+        dispatch(getMovieById(params.id));
+    }, [params, dispatch])
 
+    console.log(params)
 
     return (
-        <div>
-            MovieDetails
+
+        <div style={{color: "white"}}>
+            <Outlet/>
+            {movie.overview}
+            <StarRatings
+                rating={movie.vote_average}
+                starDimension="20px"
+                starSpacing="8px"
+                starRatedColor="yellow"
+                numberOfStars={10}
+            />
         </div>
     );
 };

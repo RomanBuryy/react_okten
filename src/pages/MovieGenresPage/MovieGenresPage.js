@@ -1,16 +1,14 @@
 import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {Outlet, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+
 import {getAllMoviesWithGenre} from "../../store";
 import Movie from "../../components/Movie/Movie";
 import css from "../MoviesPage/MoviesPage.module.css";
 
 const MovieGenresPage = () => {
 
- const params = useParams();
-
-    console.log(params.id);
-
+    const params = useParams();
     const {movies} = useSelector(state => state['moviesReducer'])
     const dispatch = useDispatch();
 
@@ -19,11 +17,12 @@ const MovieGenresPage = () => {
     }, [params.id])
 
 
-    console.log(movies)
+
 
     return (
         <div className={css.movies}>
-            {movies.results&&movies.results.map((movie)=> <Movie key={movie.id} movie={movie}/>)}
+            <Outlet/>
+            {movies.results && movies.results.map((movie) => <Movie key={movie.id} movie={movie}/>)}
         </div>
     );
 };
