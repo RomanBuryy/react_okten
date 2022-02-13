@@ -48,6 +48,10 @@ const moviesSlice = createSlice({
 
     },
     extraReducers: {
+        [getAllMovies.pending]: (state, action) => {
+            state.status = 'loading';
+            state.error = null
+        },
         [getAllMovies.fulfilled]: (state, action) => {
             state.movies = action.payload;
         },

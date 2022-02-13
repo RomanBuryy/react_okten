@@ -1,11 +1,8 @@
 .movies{
     display: flex;
-
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 62px;
     column-gap: 32px;
     margin-bottom: 100px;
-
-
 }

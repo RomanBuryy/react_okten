@@ -1,0 +1,33 @@
+.genres {
+    display: flex;
+}
+
+.genre {
+    margin-bottom: 8px;
+    width: 300px;
+}
+
+.genre a {
+    color: #EEEBC2;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.genre a:hover {
+    color: #0096D3;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.genre a[class='active'] {
+    color: #0096D3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    height: 60px;
+}

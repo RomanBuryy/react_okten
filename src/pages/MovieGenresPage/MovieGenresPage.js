@@ -16,9 +16,6 @@ const MovieGenresPage = () => {
         dispatch(getAllMoviesWithGenre(params.id));
     }, [params.id])
 
-
-
-
     return (
         <div className={css.movies}>
             <Outlet/>
