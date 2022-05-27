@@ -21,18 +21,11 @@ const Layout = () => {
                     <div className={css.user_icon}>
                         {<img src={user} alt="asd"/>}
                     </div>
-
                 </div>
-
-
             </div>
 
             <Outlet/>
-
-
         </div>
-
-
     );
 };
 
