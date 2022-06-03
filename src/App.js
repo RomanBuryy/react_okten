@@ -2,6 +2,7 @@ import {useState} from "react";
 
 import './App.css';
 import User from "./components/User";
+import Users from "./components/Users";
 
 
 function App() {
@@ -15,9 +16,7 @@ function App() {
 
     return (
         <div>
-            <button onClick={() => adder()}>Click</button>
-            {word}
-          <User name={'Roman'}></User>
+            <Users/>
 
 
         </div>
